@@ -1,25 +1,25 @@
 import { useRef } from 'react';
 
 const projects = [
-  {
-    title: 'Skyline Residence',
-    type: 'Architecture',
-    img: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80'
+  { 
+    title: 'Mercedes S-Class', 
+    type: 'Paint Correction', 
+    img: 'https://images.unsplash.com/photo-1619682817481-e994891cd1f5?auto=format&fit=crop&w=1200&q=80' 
   },
-  {
-    title: 'Aurora Pavilion',
-    type: 'Interior Design',
-    img: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80'
+  { 
+    title: 'Porsche 911', 
+    type: 'Ceramic Coating', 
+    img: 'https://images.unsplash.com/photo-1503376710972-8862f92470a1?auto=format&fit=crop&w=1200&q=80' 
   },
-  {
-    title: 'Atlas Tower',
-    type: 'Bespoke Concept',
-    img: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80'
+  { 
+    title: 'G-Wagon', 
+    type: 'Interior Detail', 
+    img: 'https://images.unsplash.com/photo-1609521263047-f8f205293f24?auto=format&fit=crop&w=1200&q=80' 
   },
-  {
-    title: 'Horizon Villa',
-    type: 'Luxury Living',
-    img: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80'
+  { 
+    title: 'Audi RS6', 
+    type: 'Full PPF Wrap', 
+    img: 'https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?auto=format&fit=crop&w=1200&q=80' 
   }
 ];
 
@@ -51,7 +51,7 @@ export default function Showcase() {
     <section className="w-full py-32 bg-obsidian z-10 relative overflow-hidden">
       <div className="container mx-auto px-6 mb-12">
         <h2 className="text-4xl md:text-6xl font-display font-bold tracking-tight uppercase">
-          Featured Work
+          Recent Details
         </h2>
       </div>
 
