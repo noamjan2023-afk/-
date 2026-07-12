@@ -1,39 +1,91 @@
+import { useRef } from 'react';
+
 const projects = [
-  { id: 1, title: 'The Obsidian House', image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop' },
-  { id: 2, title: 'Glass Pavilion', image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=2070&auto=format&fit=crop' },
-  { id: 3, title: 'Brutalist Core', image: 'https://images.unsplash.com/photo-1600566753086-00f18efc2291?q=80&w=2070&auto=format&fit=crop' },
-  { id: 4, title: 'Eco-Tower Concept', image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=2075&auto=format&fit=crop' },
+  {
+    title: 'Skyline Residence',
+    type: 'Architecture',
+    img: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80'
+  },
+  {
+    title: 'Aurora Pavilion',
+    type: 'Interior Design',
+    img: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80'
+  },
+  {
+    title: 'Atlas Tower',
+    type: 'Bespoke Concept',
+    img: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80'
+  },
+  {
+    title: 'Horizon Villa',
+    type: 'Luxury Living',
+    img: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80'
+  }
 ];
 
 export default function Showcase() {
-  const ProjectCard = ({ project }) => (
-    <div className="shrink-0 w-[85vw] md:w-[60vw] h-[60vh] md:h-[70vh] flex flex-col justify-center mx-4 relative group">
-      <div className="w-full h-full overflow-hidden rounded-3xl relative pointer-events-none border border-white/10">
-        <img src={project.image} alt={project.title} className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-[1.5s] ease-out" />
-        <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/30 to-transparent opacity-90 group-hover:opacity-70 transition-opacity duration-500" />
-        <div className="absolute bottom-10 left-10 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-          <h3 className="text-4xl md:text-5xl font-display font-bold text-white">{project.title}</h3>
-          <p className="text-accent uppercase tracking-widest mt-3 text-sm font-bold">View Project</p>
-        </div>
-      </div>
-    </div>
-  );
+  const scrollRef = useRef(null);
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+
+  const handleMouseDown = (e) => {
+    isDown = true;
+    scrollRef.current.classList.add('active');
+    startX = e.pageX - scrollRef.current.offsetLeft;
+    scrollLeft = scrollRef.current.scrollLeft;
+  };
+
+  const handleMouseLeave = () => { isDown = false; };
+  const handleMouseUp = () => { isDown = false; };
+
+  const handleMouseMove = (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - scrollRef.current.offsetLeft;
+    const walk = (x - startX) * 2;
+    scrollRef.current.scrollLeft = scrollLeft - walk;
+  };
 
   return (
-    <section className="w-full h-screen bg-obsidian z-10 relative flex items-center overflow-hidden border-t border-white/5 pointer-events-none" data-magnetic="true">
-      <div className="animate-marquee">
-        {/* First set of projects */}
-        <div className="flex shrink-0">
-          {projects.map((project) => (
-            <ProjectCard key={`first-${project.id}`} project={project} />
-          ))}
-        </div>
-        {/* Second identical set of projects for seamless looping */}
-        <div className="flex shrink-0">
-          {projects.map((project) => (
-            <ProjectCard key={`second-${project.id}`} project={project} />
-          ))}
-        </div>
+    <section className="w-full py-32 bg-obsidian z-10 relative overflow-hidden">
+      <div className="container mx-auto px-6 mb-12">
+        <h2 className="text-4xl md:text-6xl font-display font-bold tracking-tight uppercase">
+          Featured Work
+        </h2>
+      </div>
+
+      <div
+        ref={scrollRef}
+        onMouseDown={handleMouseDown}
+        onMouseLeave={handleMouseLeave}
+        onMouseUp={handleMouseUp}
+        onMouseMove={handleMouseMove}
+        className="flex overflow-x-auto snap-x snap-mandatory gap-8 px-6 md:px-20 pb-10 cursor-grab active:cursor-grabbing"
+        style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+      >
+        <style>{`div::-webkit-scrollbar { display: none; }`}</style>
+
+        {projects.map((project, i) => (
+          <div
+            key={i}
+            className="snap-center shrink-0 w-[85vw] md:w-[50vw] h-[60vh] relative rounded-3xl overflow-hidden group select-none border border-white/10"
+          >
+            {/* Background Image instead of Gray Box */}
+            <img
+              src={project.img}
+              alt={project.title}
+              className="absolute inset-0 w-full h-full object-cover grayscale contrast-125 brightness-75 group-hover:scale-105 group-hover:grayscale-0 transition-all duration-700 ease-out"
+            />
+            {/* Overlay Gradient for Typography Visibility */}
+            <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/20 to-transparent opacity-90 pointer-events-none" />
+
+            <div className="absolute bottom-10 left-10 transform translate-y-4 opacity-100 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 transition-all duration-500 pointer-events-none">
+              <h3 className="text-3xl md:text-4xl font-display font-bold text-white">{project.title}</h3>
+              <p className="text-accent uppercase tracking-widest mt-2 text-sm font-medium">{project.type}</p>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
