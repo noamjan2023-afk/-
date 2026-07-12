@@ -6,10 +6,10 @@ import SplitText from '../utils/SplitText';
 gsap.registerPlugin(ScrollTrigger);
 
 const services = [
-  { id: '01', title: 'Ceramic Coating', desc: 'Multi-layer nano-protection for extreme gloss and durability.' },
-  { id: '02', title: 'Paint Correction', desc: 'Multi-stage polishing to eliminate swirls and restore factory shine.' },
-  { id: '03', title: 'Interior Restoration', desc: 'Deep extraction, leather conditioning, and detailing.' },
-  { id: '04', title: 'PPF Wrapping', desc: 'Self-healing clear bra to protect against rock chips and scratches.' }
+  { title: 'Architecture', desc: 'Avant-garde structural design.' },
+  { title: 'Interior', desc: 'Curated experiential spaces.' },
+  { title: 'Masterplanning', desc: 'Urban ecosystem synthesis.' },
+  { title: 'Virtual', desc: 'Digital twin conceptualization.' }
 ];
 
 export default function Services() {
@@ -48,7 +48,7 @@ export default function Services() {
     <section ref={sectionRef} className="py-32 w-full z-10 relative bg-obsidian/80 backdrop-blur-sm">
       <div className="container mx-auto px-6">
         <h2 className="text-4xl md:text-6xl font-display font-bold mb-16 tracking-tight uppercase">
-          <SplitText text="Our Treatments" />
+          <SplitText text="Our Expertise" />
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((srv, i) => (
