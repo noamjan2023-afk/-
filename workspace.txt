@@ -388,6 +388,16 @@ export default function App() {
   background: #555;
 }
 
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 28s linear infinite;
+  display: flex;
+  width: max-content;
+}
+
 
 
 
@@ -861,9 +871,6 @@ export default function Services() {
 
 === src\components\Showcase.jsx ===
 
-import { useRef, useEffect } from 'react';
-import gsap from 'gsap';
-
 const projects = [
   { id: 1, title: 'The Obsidian House', image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop' },
   { id: 2, title: 'Glass Pavilion', image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=2070&auto=format&fit=crop' },
@@ -872,71 +879,8 @@ const projects = [
 ];
 
 export default function Showcase() {
-  const containerRef = useRef(null);
-  const sectionRef = useRef(null);
-  const xPercent = useRef(0);
-  const direction = useRef(-1);
-  const speed = useRef(0.05); // Base auto-scroll speed
-  const requestRef = useRef();
-
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      if (!sectionRef.current) return;
-      const rect = sectionRef.current.getBoundingClientRect();
-      // Only track if mouse is vertically within the section
-      if (e.clientY < rect.top || e.clientY > rect.bottom) return;
-
-      const mouseX = e.clientX;
-      const width = window.innerWidth;
-      // Normalized from -0.5 (left edge) to 0.5 (right edge)
-      const normalizedX = (mouseX / width) - 0.5; 
-      
-      // If mouse is near center, stop or move very slowly.
-      // If mouse is near edges, move faster in that direction.
-      // Negative normalizedX (left side) -> direction = 1 (scrolls right to reveal left items)
-      // Positive normalizedX (right side) -> direction = -1 (scrolls left to reveal right items)
-      direction.current = normalizedX > 0 ? -1 : 1;
-      
-      // Speed scales up based on distance from center. Max speed multiplier is 0.4
-      speed.current = Math.abs(normalizedX) * 0.4;
-    };
-
-    const handleMouseLeave = () => {
-      // Reset to default slow leftward scroll when mouse leaves the section
-      direction.current = -1;
-      speed.current = 0.05;
-    };
-
-    window.addEventListener('mousemove', handleMouseMove);
-    if (sectionRef.current) {
-      sectionRef.current.addEventListener('mouseleave', handleMouseLeave);
-    }
-
-    const animate = () => {
-      if (xPercent.current <= -50) {
-        xPercent.current = 0;
-      } else if (xPercent.current > 0) {
-        xPercent.current = -50;
-      }
-      
-      gsap.set(containerRef.current, { xPercent: xPercent.current });
-      xPercent.current += speed.current * direction.current;
-      requestRef.current = requestAnimationFrame(animate);
-    }
-    
-    requestRef.current = requestAnimationFrame(animate);
-
-    return () => {
-      cancelAnimationFrame(requestRef.current);
-      window.removeEventListener('mousemove', handleMouseMove);
-      if (sectionRef.current) {
-        sectionRef.current.removeEventListener('mouseleave', handleMouseLeave);
-      }
-    };
-  }, []);
-
   const ProjectCard = ({ project }) => (
-    <div className="shrink-0 w-[85vw] md:w-[60vw] h-[60vh] md:h-[70vh] flex flex-col justify-center mx-4 relative group cursor-pointer">
+    <div className="shrink-0 w-[85vw] md:w-[60vw] h-[60vh] md:h-[70vh] flex flex-col justify-center mx-4 relative group">
       <div className="w-full h-full overflow-hidden rounded-3xl relative pointer-events-none border border-white/10">
         <img src={project.image} alt={project.title} className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-[1.5s] ease-out" />
         <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/30 to-transparent opacity-90 group-hover:opacity-70 transition-opacity duration-500" />
@@ -949,8 +893,8 @@ export default function Showcase() {
   );
 
   return (
-    <section ref={sectionRef} className="w-full h-screen bg-obsidian z-10 relative flex items-center overflow-hidden border-t border-white/5" data-magnetic="true">
-      <div ref={containerRef} className="flex w-max">
+    <section className="w-full h-screen bg-obsidian z-10 relative flex items-center overflow-hidden border-t border-white/5 pointer-events-none" data-magnetic="true">
+      <div className="animate-marquee">
         {/* First set of projects */}
         <div className="flex shrink-0">
           {projects.map((project) => (
