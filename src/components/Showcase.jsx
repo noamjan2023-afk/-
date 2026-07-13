@@ -2,24 +2,24 @@ import { useRef } from 'react';
 
 const projects = [
   {
-    title: 'איתור נזילה סמויה',
-    type: 'מצלמה טרמית',
-    img: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80'
+    title: 'דירוג נמוך (Low Fade)',
+    type: 'עיצוב שיער',
+    img: 'https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=1200&q=80'
   },
   {
-    title: 'החלפת צנרת',
-    type: 'מערכות מים',
-    img: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1200&q=80'
+    title: 'עיצוב זקן פרימיום',
+    type: 'טיפוח זקן',
+    img: 'https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=1200&q=80'
   },
   {
-    title: 'שיפוץ חדר רחצה',
-    type: 'עבודות גמר',
-    img: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=1200&q=80'
+    title: 'תספורת ילדים',
+    type: 'שירות אישי',
+    img: 'https://images.unsplash.com/photo-1534063222387-a25eb6629ce4?auto=format&fit=crop&w=1200&q=80'
   },
   {
-    title: 'תיקון פיצוץ',
-    type: 'שירות חירום',
-    img: 'https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&w=1200&q=80'
+    title: 'קלאסי ומודרני',
+    type: 'מספרת גברים',
+    img: 'https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=1200&q=80'
   }
 ];
 
@@ -51,7 +51,7 @@ export default function Showcase() {
     <section className="w-full py-32 bg-obsidian z-10 relative overflow-hidden">
       <div className="container mx-auto px-6 mb-12">
         <h2 className="text-4xl md:text-6xl font-display font-bold tracking-tight uppercase">
-          פרויקטים נבחרים
+          תספורות נבחרות
         </h2>
       </div>
 

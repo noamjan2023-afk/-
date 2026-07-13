@@ -5,10 +5,10 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const stats = [
-  { value: '9.82', label: 'דירוג במידרג' },
-  { value: '100+', label: 'לקוחות מרוצים' },
-  { value: '24/6', label: 'זמינות' },
-  { value: '100%', label: 'אחריות' },
+  { value: '5.0', label: 'דירוג בגוגל' },
+  { value: '1,000+', label: 'לקוחות קבועים' },
+  { value: '7', label: 'שנות ניסיון' },
+  { value: '100%', label: 'שביעות רצון' },
 ];
 
 export default function Trust() {

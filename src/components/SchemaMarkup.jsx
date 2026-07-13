@@ -1,25 +1,18 @@
 export default function SchemaMarkup() {
   const schema = {
     "@context": "https://schema.org",
-    "@type": "Plumber",
-    "name": "עידן עבודות אינסטלציה ואיתור נזילות",
-    "description": "Professional plumbing services, specializing in thermal leak detection, sewage systems, and bathroom renovations. Serving the Sharon and Center areas.",
-    "telephone": "054-590-8198",
-    "email": "idan.ihie@gmail.com",
+    "@type": "HairSalon",
+    "name": "GANOOV מספרת גברים",
+    "description": "Premium barbershop in Rishon LeZion. Mens haircuts, beard trims, and styling.",
+    "telephone": "052-400-2658",
+    "url": "https://simpletor.app",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Natanya/Rishon LeZion",
+      "streetAddress": "Hatsor St 1",
+      "addressLocality": "Rishon LeZion",
       "addressCountry": "IL"
     },
     "areaServed": [
-      {
-        "@type": "City",
-        "name": "Natanya"
-      },
-      {
-        "@type": "City",
-        "name": "Tel Aviv"
-      },
       {
         "@type": "City",
         "name": "Rishon LeZion"

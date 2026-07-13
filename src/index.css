@@ -2,8 +2,8 @@
 @import "tailwindcss";
 
 @theme {
-  --color-obsidian: #05192d;
-  --color-accent: #00bfff;
+  --color-obsidian: #0f0f0f;
+  --color-accent: #d4af37;
   --font-sans: 'Assistant', sans-serif;
   --font-display: 'Rubik', sans-serif;
 }

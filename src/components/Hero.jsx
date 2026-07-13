@@ -41,32 +41,36 @@ export default function Hero({ isLoaded }) {
       <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div className="flex flex-col space-y-6">
           <h1 ref={h1Ref} className="text-5xl md:text-7xl font-display font-black tracking-tight text-white leading-none">
-            <span className="block overflow-hidden pb-2"><span className="hero-text block translate-y-full">איתור נזילות</span></span>
-            <span className="block overflow-hidden pb-2"><span className="hero-text block translate-y-full text-transparent bg-clip-text bg-gradient-to-r from-accent to-blue-400">במצלמה טרמית</span></span>
-            <span className="block overflow-hidden pb-2"><span className="hero-text block translate-y-full">ברמת מומחה</span></span>
+            <span className="block overflow-hidden pb-2"><span className="hero-text block translate-y-full">GANOOV</span></span>
+            <span className="block overflow-hidden pb-2"><span className="hero-text block translate-y-full text-transparent bg-clip-text bg-gradient-to-r from-accent to-yellow-200">מספרת גברים</span></span>
+            <span className="block overflow-hidden pb-2"><span className="hero-text block translate-y-full">ופרימיום</span></span>
           </h1>
 
           <p ref={pRef} className="text-lg md:text-xl font-light text-neutral-300 max-w-md opacity-0 leading-relaxed">
-            עידן עבודות אינסטלציה - פתרונות מתקדמים לאיתור נזילות, תחזוקת מערכות מים וביוב, ושיפוץ חדרי רחצה באזור המרכז.
+            חוויית תספורת ייחודית לגברים בראשון לציון. עיצוב שיער, זקן, ושירות ברמה הגבוהה ביותר.
           </p>
 
           {/* New Interactive Call To Action */}
           <div ref={ctaRef} className="opacity-0 pt-4 flex flex-wrap gap-4">
-            <button
-              onClick={scrollToContact}
-              data-magnetic="true"
-              className="px-8 py-4 bg-transparent border border-white text-white font-display font-bold tracking-widest text-sm rounded-full hover:bg-white hover:text-obsidian transition-all duration-300 shadow-lg hover:shadow-accent/20"
-            >
-              יצירת קשר
-            </button>
             <a
-              href="tel:054-590-8198"
-              className="px-8 py-4 bg-accent text-obsidian font-display font-bold tracking-widest text-sm rounded-full hover:bg-white transition-all duration-300 shadow-lg hover:shadow-accent/50 flex items-center justify-center"
+              href="https://simpletor.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-magnetic="true"
+              className="px-8 py-4 bg-transparent border border-white text-white font-display font-bold tracking-widest text-sm rounded-full hover:bg-white hover:text-obsidian transition-all duration-300 shadow-lg hover:shadow-accent/20 flex items-center justify-center"
             >
-              054-590-8198
+              לקביעת תור
             </a>
             <a
-              href="https://wa.me/972545908198"
+              href="https://www.google.com/maps/place/GANOOV+%D7%9E%D7%A1%D7%A4%D7%A8%D7%AA+%D7%92%D7%91%D7%A8%D7%99%D7%9D%E2%80%AD/@31.967957,34.8054428,15z/data=!4m10!1m2!2m1!1sbarbershops!3m6!1s0x1502b5adbea371bf:0x76aa16ef4ebebbe3!8m2!3d31.967957!4d34.8244972!15sCgtiYXJiZXJzaG9wc1oNIgtiYXJiZXJzaG9wc5IBEnVuaXNleF9oYWlyZHJlc3NlcpoBRENpOURRVWxSUVVOdlpFTm9kSGxqUmpsdlQyeHZNbFV4Um0xWmF6VlJUbXhHY0dSVVpETlNiWGhYVWtZNWVWVnVZeEFC4AEA-gEFCMMCEEA!16s%2Fg%2F11yn8__x49?entry=ttu&g_ep=EgoyMDI2MDcwOC4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-4 bg-accent text-obsidian font-display font-bold tracking-widest text-sm rounded-full hover:bg-white transition-all duration-300 shadow-lg hover:shadow-accent/50 flex items-center justify-center"
+            >
+              ניווט ב-Maps
+            </a>
+            <a
+              href="https://wa.me/972524002658"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-[#25D366] text-white font-display font-bold tracking-widest text-sm rounded-full hover:bg-[#128C7E] transition-all duration-300 shadow-lg flex items-center justify-center"
