@@ -11,26 +11,6 @@ export default function Booking() {
             <a href="https://simpletor.app" target="_blank" rel="noopener noreferrer" className="text-2xl text-accent hover:text-white transition-colors">לקביעת תור באפליקציה</a>
           </div>
         </div>
-        
-        <form className="space-y-8 backdrop-blur-md bg-white/5 p-8 md:p-12 rounded-3xl border border-white/10 shadow-2xl">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="flex flex-col space-y-2">
-              <label className="text-xs uppercase tracking-widest text-neutral-500 font-semibold">שם מלא</label>
-              <input type="text" className="bg-transparent border-b border-white/20 focus:border-accent text-white py-3 outline-none transition-colors" placeholder="ישראל ישראלי" />
-            </div>
-            <div className="flex flex-col space-y-2">
-              <label className="text-xs uppercase tracking-widest text-neutral-500 font-semibold">טלפון</label>
-              <input type="tel" className="bg-transparent border-b border-white/20 focus:border-accent text-white py-3 outline-none transition-colors" placeholder="050-0000000" />
-            </div>
-          </div>
-          <div className="flex flex-col space-y-2">
-            <label className="text-xs uppercase tracking-widest text-neutral-500 font-semibold">פרטי הפנייה</label>
-            <textarea rows="4" className="bg-transparent border-b border-white/20 focus:border-accent text-white py-3 outline-none transition-colors resize-none" placeholder="ספרו לנו איך נוכל לעזור..."></textarea>
-          </div>
-          <button type="button" className="w-full bg-white text-obsidian font-bold py-5 rounded-full uppercase tracking-[0.2em] hover:bg-accent hover:text-white transition-all duration-300">
-            שליחה
-          </button>
-        </form>
       </div>
     </section>
   );

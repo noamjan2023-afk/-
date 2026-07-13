@@ -53,16 +53,7 @@ export default function Hero({ isLoaded }) {
           {/* New Interactive Call To Action */}
           <div ref={ctaRef} className="opacity-0 pt-4 flex flex-wrap gap-4">
             <a
-              href="https://simpletor.app"
-              target="_blank"
-              rel="noopener noreferrer"
-              data-magnetic="true"
-              className="px-8 py-4 bg-transparent border border-white text-white font-display font-bold tracking-widest text-sm rounded-full hover:bg-white hover:text-obsidian transition-all duration-300 shadow-lg hover:shadow-accent/20 flex items-center justify-center"
-            >
-              לקביעת תור
-            </a>
-            <a
-              href="https://www.google.com/maps/place/GANOOV+%D7%9E%D7%A1%D7%A4%D7%A8%D7%AA+%D7%92%D7%91%D7%A8%D7%99%D7%9D%E2%80%AD/@31.967957,34.8054428,15z/data=!4m10!1m2!2m1!1sbarbershops!3m6!1s0x1502b5adbea371bf:0x76aa16ef4ebebbe3!8m2!3d31.967957!4d34.8244972!15sCgtiYXJiZXJzaG9wc1oNIgtiYXJiZXJzaG9wc5IBEnVuaXNleF9oYWlyZHJlc3NlcpoBRENpOURRVWxSUVVOdlpFTm9kSGxqUmpsdlQyeHZNbFV4Um0xWmF6VlJUbXhHY0dSVVpETlNiWGhYVWtZNWVWVnVZeEFC4AEA-gEFCMMCEEA!16s%2Fg%2F11yn8__x49?entry=ttu&g_ep=EgoyMDI2MDcwOC4wIKXMDSoASAFQAw%3D%3D"
+              href="https://maps.app.goo.gl/QonAFb7rqSprXk5c8"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-accent text-obsidian font-display font-bold tracking-widest text-sm rounded-full hover:bg-white transition-all duration-300 shadow-lg hover:shadow-accent/50 flex items-center justify-center"
