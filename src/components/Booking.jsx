@@ -8,7 +8,7 @@ export default function Booking() {
           <div className="mt-8 flex flex-col md:flex-row justify-center items-center gap-6">
             <a href="https://wa.me/972524002658" target="_blank" rel="noopener noreferrer" className="text-2xl font-bold text-[#25D366] hover:text-white transition-colors">052-400-2658 (וואטסאפ)</a>
             <span className="hidden md:block text-neutral-600">|</span>
-            <a href="https://simpletor.app" target="_blank" rel="noopener noreferrer" className="text-2xl text-accent hover:text-white transition-colors">לקביעת תור באפליקציה</a>
+            <a href="https://maps.app.goo.gl/QonAFb7rqSprXk5c8" target="_blank" rel="noopener noreferrer" className="text-2xl text-accent hover:text-white transition-colors">ניווט ב-Maps</a>
           </div>
         </div>
       </div>
