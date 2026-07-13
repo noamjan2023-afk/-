@@ -51,7 +51,7 @@ export default function Hero({ isLoaded }) {
           </p>
 
           {/* New Interactive Call To Action */}
-          <div ref={ctaRef} className="opacity-0 pt-4 flex gap-4">
+          <div ref={ctaRef} className="opacity-0 pt-4 flex flex-wrap gap-4">
             <button
               onClick={scrollToContact}
               data-magnetic="true"
@@ -64,6 +64,14 @@ export default function Hero({ isLoaded }) {
               className="px-8 py-4 bg-accent text-obsidian font-display font-bold tracking-widest text-sm rounded-full hover:bg-white transition-all duration-300 shadow-lg hover:shadow-accent/50 flex items-center justify-center"
             >
               054-590-8198
+            </a>
+            <a
+              href="https://wa.me/972545908198"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-4 bg-[#25D366] text-white font-display font-bold tracking-widest text-sm rounded-full hover:bg-[#128C7E] transition-all duration-300 shadow-lg flex items-center justify-center"
+            >
+              WhatsApp
             </a>
           </div>
         </div>
