@@ -2,24 +2,24 @@ import { useRef } from 'react';
 
 const projects = [
   {
-    title: 'Skyline Residence',
-    type: 'Architecture',
-    img: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80'
+    title: 'איתור נזילה סמויה',
+    type: 'מצלמה טרמית',
+    img: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80'
   },
   {
-    title: 'Aurora Pavilion',
-    type: 'Interior Design',
-    img: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80'
+    title: 'החלפת צנרת',
+    type: 'מערכות מים',
+    img: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1200&q=80'
   },
   {
-    title: 'Atlas Tower',
-    type: 'Bespoke Concept',
-    img: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80'
+    title: 'שיפוץ חדר רחצה',
+    type: 'עבודות גמר',
+    img: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=1200&q=80'
   },
   {
-    title: 'Horizon Villa',
-    type: 'Luxury Living',
-    img: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80'
+    title: 'תיקון פיצוץ',
+    type: 'שירות חירום',
+    img: 'https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&w=1200&q=80'
   }
 ];
 
@@ -51,7 +51,7 @@ export default function Showcase() {
     <section className="w-full py-32 bg-obsidian z-10 relative overflow-hidden">
       <div className="container mx-auto px-6 mb-12">
         <h2 className="text-4xl md:text-6xl font-display font-bold tracking-tight uppercase">
-          Featured Work
+          פרויקטים נבחרים
         </h2>
       </div>
 

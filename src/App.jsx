@@ -11,6 +11,7 @@ import Trust from './components/Trust';
 import Booking from './components/Booking';
 import Preloader from './components/Preloader';
 import CustomCursor from './components/CustomCursor';
+import SchemaMarkup from './components/SchemaMarkup';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -39,6 +40,7 @@ export default function App() {
 
   return (
     <div className="relative w-full bg-obsidian text-neutral-100 min-h-screen font-sans selection:bg-accent selection:text-obsidian">
+      <SchemaMarkup />
       
       {USE_CUSTOM_CURSOR && (
         <>

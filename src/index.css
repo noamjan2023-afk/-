@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600&family=Rubik:wght@700;800;900&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --color-obsidian: #0A0A0A;
-  --color-accent: #00F0FF;
-  --font-sans: 'Inter', sans-serif;
-  --font-display: 'Outfit', sans-serif;
+  --color-obsidian: #05192d;
+  --color-accent: #00bfff;
+  --font-sans: 'Assistant', sans-serif;
+  --font-display: 'Rubik', sans-serif;
 }
 
 @layer base {

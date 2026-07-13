@@ -40,25 +40,31 @@ export default function Hero({ isLoaded }) {
     <section className="relative w-full h-screen flex items-center justify-center overflow-hidden mix-blend-difference z-10">
       <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div className="flex flex-col space-y-6">
-          <h1 ref={h1Ref} className="text-6xl md:text-8xl font-display font-black tracking-tighter uppercase text-white leading-none">
-            <span className="block overflow-hidden pb-2"><span className="hero-text block translate-y-full">Vision</span></span>
-            <span className="block overflow-hidden pb-2"><span className="hero-text block translate-y-full text-transparent bg-clip-text bg-gradient-to-r from-accent to-purple-500">Beyond</span></span>
-            <span className="block overflow-hidden pb-2"><span className="hero-text block translate-y-full">Space</span></span>
+          <h1 ref={h1Ref} className="text-5xl md:text-7xl font-display font-black tracking-tight text-white leading-none">
+            <span className="block overflow-hidden pb-2"><span className="hero-text block translate-y-full">איתור נזילות</span></span>
+            <span className="block overflow-hidden pb-2"><span className="hero-text block translate-y-full text-transparent bg-clip-text bg-gradient-to-r from-accent to-blue-400">במצלמה טרמית</span></span>
+            <span className="block overflow-hidden pb-2"><span className="hero-text block translate-y-full">ברמת מומחה</span></span>
           </h1>
 
           <p ref={pRef} className="text-lg md:text-xl font-light text-neutral-300 max-w-md opacity-0 leading-relaxed">
-            Designing timeless spaces for visionary brands. We craft premium environments that perfectly balance cutting-edge innovation with human experience.
+            עידן עבודות אינסטלציה - פתרונות מתקדמים לאיתור נזילות, תחזוקת מערכות מים וביוב, ושיפוץ חדרי רחצה באזור המרכז.
           </p>
 
           {/* New Interactive Call To Action */}
-          <div ref={ctaRef} className="opacity-0 pt-4">
+          <div ref={ctaRef} className="opacity-0 pt-4 flex gap-4">
             <button
               onClick={scrollToContact}
               data-magnetic="true"
-              className="px-8 py-4 bg-transparent border border-white text-white font-display font-bold tracking-widest uppercase text-sm rounded-full hover:bg-white hover:text-obsidian transition-all duration-300 shadow-lg hover:shadow-accent/20"
+              className="px-8 py-4 bg-transparent border border-white text-white font-display font-bold tracking-widest text-sm rounded-full hover:bg-white hover:text-obsidian transition-all duration-300 shadow-lg hover:shadow-accent/20"
             >
-              Start Project
+              יצירת קשר
             </button>
+            <a
+              href="tel:054-590-8198"
+              className="px-8 py-4 bg-accent text-obsidian font-display font-bold tracking-widest text-sm rounded-full hover:bg-white transition-all duration-300 shadow-lg hover:shadow-accent/50 flex items-center justify-center"
+            >
+              054-590-8198
+            </a>
           </div>
         </div>
         <div className="hidden md:block">

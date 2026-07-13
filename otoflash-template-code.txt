@@ -16,12 +16,12 @@
 === index.html ===
 
 <!doctype html>
-<html lang="he" dir="rtl">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>עידן עבודות אינסטלציה ואיתור נזילות</title>
+    <title>Vision | Premium Architecture Studio</title>
   </head>
   <body>
     <div id="root"></div>
@@ -64,27 +64,6 @@
     "vite": "^8.1.1"
   }
 }
-
-
-
-=== README.md ===
-
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
 
 
 
@@ -308,7 +287,6 @@ import Trust from './components/Trust';
 import Booking from './components/Booking';
 import Preloader from './components/Preloader';
 import CustomCursor from './components/CustomCursor';
-import SchemaMarkup from './components/SchemaMarkup';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -337,7 +315,6 @@ export default function App() {
 
   return (
     <div className="relative w-full bg-obsidian text-neutral-100 min-h-screen font-sans selection:bg-accent selection:text-obsidian">
-      <SchemaMarkup />
       
       {USE_CUSTOM_CURSOR && (
         <>
@@ -376,14 +353,14 @@ export default function App() {
 
 === src\index.css ===
 
-@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600&family=Rubik:wght@700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@700;800;900&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --color-obsidian: #05192d;
-  --color-accent: #00bfff;
-  --font-sans: 'Assistant', sans-serif;
-  --font-display: 'Rubik', sans-serif;
+  --color-obsidian: #0A0A0A;
+  --color-accent: #00F0FF;
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Outfit', sans-serif;
 }
 
 @layer base {
@@ -611,32 +588,27 @@ export default function Booking() {
     <section id="booking" className="py-32 w-full min-h-screen flex items-center justify-center z-10 relative">
       <div className="container mx-auto px-6 max-w-4xl">
         <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-7xl font-display font-black tracking-tighter uppercase mb-6">יצירת קשר</h2>
-          <p className="text-xl font-light text-neutral-400">אפשר להשאיר פרטים ונחזור אליכם בהקדם.</p>
-          <div className="mt-8 flex flex-col md:flex-row justify-center items-center gap-6">
-            <a href="tel:054-590-8198" className="text-2xl font-bold text-accent hover:text-white transition-colors">054-590-8198</a>
-            <span className="hidden md:block text-neutral-600">|</span>
-            <a href="mailto:idan.ihie@gmail.com" className="text-2xl text-accent hover:text-white transition-colors">idan.ihie@gmail.com</a>
-          </div>
+          <h2 className="text-5xl md:text-7xl font-display font-black tracking-tighter uppercase mb-6">Book Your Detail</h2>
+          <p className="text-xl font-light text-neutral-400">Secure your spot at Rishon LeZion's premier auto styling center.</p>
         </div>
         
         <form className="space-y-8 backdrop-blur-md bg-white/5 p-8 md:p-12 rounded-3xl border border-white/10 shadow-2xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="flex flex-col space-y-2">
-              <label className="text-xs uppercase tracking-widest text-neutral-500 font-semibold">שם מלא</label>
-              <input type="text" className="bg-transparent border-b border-white/20 focus:border-accent text-white py-3 outline-none transition-colors" placeholder="ישראל ישראלי" />
+              <label className="text-xs uppercase tracking-widest text-neutral-500 font-semibold">Name</label>
+              <input type="text" className="bg-transparent border-b border-white/20 focus:border-accent text-white py-3 outline-none transition-colors" placeholder="John Doe" />
             </div>
             <div className="flex flex-col space-y-2">
-              <label className="text-xs uppercase tracking-widest text-neutral-500 font-semibold">טלפון</label>
-              <input type="tel" className="bg-transparent border-b border-white/20 focus:border-accent text-white py-3 outline-none transition-colors" placeholder="050-0000000" />
+              <label className="text-xs uppercase tracking-widest text-neutral-500 font-semibold">Email</label>
+              <input type="email" className="bg-transparent border-b border-white/20 focus:border-accent text-white py-3 outline-none transition-colors" placeholder="john@example.com" />
             </div>
           </div>
           <div className="flex flex-col space-y-2">
-            <label className="text-xs uppercase tracking-widest text-neutral-500 font-semibold">פרטי הפנייה</label>
-            <textarea rows="4" className="bg-transparent border-b border-white/20 focus:border-accent text-white py-3 outline-none transition-colors resize-none" placeholder="ספרו לנו איך נוכל לעזור..."></textarea>
+            <label className="text-xs uppercase tracking-widest text-neutral-500 font-semibold">Vehicle Model & Requested Services</label>
+            <textarea rows="4" className="bg-transparent border-b border-white/20 focus:border-accent text-white py-3 outline-none transition-colors resize-none" placeholder="Tell us about your vision..."></textarea>
           </div>
           <button type="button" className="w-full bg-white text-obsidian font-bold py-5 rounded-full uppercase tracking-[0.2em] hover:bg-accent hover:text-white transition-all duration-300">
-            שליחה
+            Submit Inquiry
           </button>
         </form>
       </div>
@@ -756,31 +728,25 @@ export default function Hero({ isLoaded }) {
     <section className="relative w-full h-screen flex items-center justify-center overflow-hidden mix-blend-difference z-10">
       <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div className="flex flex-col space-y-6">
-          <h1 ref={h1Ref} className="text-5xl md:text-7xl font-display font-black tracking-tight text-white leading-none">
-            <span className="block overflow-hidden pb-2"><span className="hero-text block translate-y-full">איתור נזילות</span></span>
-            <span className="block overflow-hidden pb-2"><span className="hero-text block translate-y-full text-transparent bg-clip-text bg-gradient-to-r from-accent to-blue-400">במצלמה טרמית</span></span>
-            <span className="block overflow-hidden pb-2"><span className="hero-text block translate-y-full">ברמת מומחה</span></span>
+          <h1 ref={h1Ref} className="text-6xl md:text-8xl font-display font-black tracking-tighter uppercase text-white leading-none">
+            <span className="block overflow-hidden pb-2"><span className="hero-text block translate-y-full">Otoflash</span></span>
+            <span className="block overflow-hidden pb-2"><span className="hero-text block translate-y-full text-transparent bg-clip-text bg-gradient-to-r from-accent to-purple-500">Premium</span></span>
+            <span className="block overflow-hidden pb-2"><span className="hero-text block translate-y-full">Detailing</span></span>
           </h1>
 
           <p ref={pRef} className="text-lg md:text-xl font-light text-neutral-300 max-w-md opacity-0 leading-relaxed">
-            עידן עבודות אינסטלציה - פתרונות מתקדמים לאיתור נזילות, תחזוקת מערכות מים וביוב, ושיפוץ חדרי רחצה באזור המרכז.
+            High-end automotive styling and ceramic protection. We bring luxury vehicles back to absolute perfection, blending cutting-edge nano-technology with obsessive attention to detail.
           </p>
 
           {/* New Interactive Call To Action */}
-          <div ref={ctaRef} className="opacity-0 pt-4 flex gap-4">
+          <div ref={ctaRef} className="opacity-0 pt-4">
             <button
               onClick={scrollToContact}
               data-magnetic="true"
-              className="px-8 py-4 bg-transparent border border-white text-white font-display font-bold tracking-widest text-sm rounded-full hover:bg-white hover:text-obsidian transition-all duration-300 shadow-lg hover:shadow-accent/20"
+              className="px-8 py-4 bg-transparent border border-white text-white font-display font-bold tracking-widest uppercase text-sm rounded-full hover:bg-white hover:text-obsidian transition-all duration-300 shadow-lg hover:shadow-accent/20"
             >
-              יצירת קשר
+              Get a Quote
             </button>
-            <a
-              href="tel:054-590-8198"
-              className="px-8 py-4 bg-accent text-obsidian font-display font-bold tracking-widest text-sm rounded-full hover:bg-white transition-all duration-300 shadow-lg hover:shadow-accent/50 flex items-center justify-center"
-            >
-              054-590-8198
-            </a>
           </div>
         </div>
         <div className="hidden md:block">
@@ -842,47 +808,6 @@ export default function Preloader({ onComplete }) {
 
 
 
-=== src\components\SchemaMarkup.jsx ===
-
-export default function SchemaMarkup() {
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "Plumber",
-    "name": "עידן עבודות אינסטלציה ואיתור נזילות",
-    "description": "Professional plumbing services, specializing in thermal leak detection, sewage systems, and bathroom renovations. Serving the Sharon and Center areas.",
-    "telephone": "054-590-8198",
-    "email": "idan.ihie@gmail.com",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Natanya/Rishon LeZion",
-      "addressCountry": "IL"
-    },
-    "areaServed": [
-      {
-        "@type": "City",
-        "name": "Natanya"
-      },
-      {
-        "@type": "City",
-        "name": "Tel Aviv"
-      },
-      {
-        "@type": "City",
-        "name": "Rishon LeZion"
-      }
-    ]
-  };
-
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
-  );
-}
-
-
-
 === src\components\Services.jsx ===
 
 import { useEffect, useRef } from 'react';
@@ -893,10 +818,10 @@ import SplitText from '../utils/SplitText';
 gsap.registerPlugin(ScrollTrigger);
 
 const services = [
-  { title: 'איתור נזילות', desc: 'איתור במצלמה טרמית ללא הרס' },
-  { title: 'מערכות מים וביוב', desc: 'תחזוקה, תיקון והחלפת צנרת' },
-  { title: 'שיפוץ חדרי רחצה', desc: 'שיפוץ קומפלט ברמת גימור גבוהה' },
-  { title: 'שירותי אינסטלציה', desc: 'פתרון תקלות מים וביוב מתקדמים' }
+  { id: '01', title: 'Ceramic Coating', desc: 'Multi-layer nano-protection for extreme gloss and durability.' },
+  { id: '02', title: 'Paint Correction', desc: 'Multi-stage polishing to eliminate swirls and restore factory shine.' },
+  { id: '03', title: 'Interior Restoration', desc: 'Deep extraction, leather conditioning, and detailing.' },
+  { id: '04', title: 'PPF Wrapping', desc: 'Self-healing clear bra to protect against rock chips and scratches.' }
 ];
 
 export default function Services() {
@@ -935,7 +860,7 @@ export default function Services() {
     <section ref={sectionRef} className="py-32 w-full z-10 relative bg-obsidian/80 backdrop-blur-sm">
       <div className="container mx-auto px-6">
         <h2 className="text-4xl md:text-6xl font-display font-bold mb-16 tracking-tight uppercase">
-          <SplitText text="תחומי התמחות" />
+          <SplitText text="Our Treatments" />
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((srv, i) => (
@@ -963,25 +888,25 @@ export default function Services() {
 import { useRef } from 'react';
 
 const projects = [
-  {
-    title: 'איתור נזילה סמויה',
-    type: 'מצלמה טרמית',
-    img: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80'
+  { 
+    title: 'Mercedes S-Class', 
+    type: 'Paint Correction', 
+    img: 'https://images.unsplash.com/photo-1619682817481-e994891cd1f5?auto=format&fit=crop&w=1200&q=80' 
   },
-  {
-    title: 'החלפת צנרת',
-    type: 'מערכות מים',
-    img: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1200&q=80'
+  { 
+    title: 'Porsche 911', 
+    type: 'Ceramic Coating', 
+    img: 'https://images.unsplash.com/photo-1503376710972-8862f92470a1?auto=format&fit=crop&w=1200&q=80' 
   },
-  {
-    title: 'שיפוץ חדר רחצה',
-    type: 'עבודות גמר',
-    img: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=1200&q=80'
+  { 
+    title: 'G-Wagon', 
+    type: 'Interior Detail', 
+    img: 'https://images.unsplash.com/photo-1609521263047-f8f205293f24?auto=format&fit=crop&w=1200&q=80' 
   },
-  {
-    title: 'תיקון פיצוץ',
-    type: 'שירות חירום',
-    img: 'https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&w=1200&q=80'
+  { 
+    title: 'Audi RS6', 
+    type: 'Full PPF Wrap', 
+    img: 'https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?auto=format&fit=crop&w=1200&q=80' 
   }
 ];
 
@@ -1013,7 +938,7 @@ export default function Showcase() {
     <section className="w-full py-32 bg-obsidian z-10 relative overflow-hidden">
       <div className="container mx-auto px-6 mb-12">
         <h2 className="text-4xl md:text-6xl font-display font-bold tracking-tight uppercase">
-          פרויקטים נבחרים
+          Recent Details
         </h2>
       </div>
 
@@ -1063,10 +988,10 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const stats = [
-  { value: '9.82', label: 'דירוג במידרג' },
-  { value: '100+', label: 'לקוחות מרוצים' },
-  { value: '24/6', label: 'זמינות' },
-  { value: '100%', label: 'אחריות' },
+  { value: '42+', label: 'Projects Completed' },
+  { value: '15', label: 'Industry Awards' },
+  { value: '20M', label: 'Sq. Ft. Designed' },
+  { value: 'Global', label: 'Clientele' },
 ];
 
 export default function Trust() {

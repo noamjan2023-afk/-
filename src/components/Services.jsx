@@ -6,10 +6,10 @@ import SplitText from '../utils/SplitText';
 gsap.registerPlugin(ScrollTrigger);
 
 const services = [
-  { title: 'Architecture', desc: 'Avant-garde structural design.' },
-  { title: 'Interior', desc: 'Curated experiential spaces.' },
-  { title: 'Masterplanning', desc: 'Urban ecosystem synthesis.' },
-  { title: 'Virtual', desc: 'Digital twin conceptualization.' }
+  { title: 'איתור נזילות', desc: 'איתור במצלמה טרמית ללא הרס' },
+  { title: 'מערכות מים וביוב', desc: 'תחזוקה, תיקון והחלפת צנרת' },
+  { title: 'שיפוץ חדרי רחצה', desc: 'שיפוץ קומפלט ברמת גימור גבוהה' },
+  { title: 'שירותי אינסטלציה', desc: 'פתרון תקלות מים וביוב מתקדמים' }
 ];
 
 export default function Services() {
@@ -48,7 +48,7 @@ export default function Services() {
     <section ref={sectionRef} className="py-32 w-full z-10 relative bg-obsidian/80 backdrop-blur-sm">
       <div className="container mx-auto px-6">
         <h2 className="text-4xl md:text-6xl font-display font-bold mb-16 tracking-tight uppercase">
-          <SplitText text="Our Expertise" />
+          <SplitText text="תחומי התמחות" />
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((srv, i) => (
