@@ -71,7 +71,7 @@ export default function Hero({ isLoaded }) {
               rel="noopener noreferrer"
               className="px-8 py-4 bg-[#25D366] text-white font-display font-bold tracking-widest text-sm rounded-full hover:bg-[#128C7E] transition-all duration-300 shadow-lg flex items-center justify-center"
             >
-              WhatsApp
+              וואטסאפ
             </a>
           </div>
         </div>

@@ -6,7 +6,7 @@ export default function Booking() {
           <h2 className="text-5xl md:text-7xl font-display font-black tracking-tighter uppercase mb-6">יצירת קשר</h2>
           <p className="text-xl font-light text-neutral-400">אפשר להשאיר פרטים ונחזור אליכם בהקדם.</p>
           <div className="mt-8 flex flex-col md:flex-row justify-center items-center gap-6">
-            <a href="tel:054-590-8198" className="text-2xl font-bold text-accent hover:text-white transition-colors">054-590-8198</a>
+            <a href="https://wa.me/972545908198" target="_blank" rel="noopener noreferrer" className="text-2xl font-bold text-[#25D366] hover:text-white transition-colors">054-590-8198 (וואטסאפ)</a>
             <span className="hidden md:block text-neutral-600">|</span>
             <a href="mailto:idan.ihie@gmail.com" className="text-2xl text-accent hover:text-white transition-colors">idan.ihie@gmail.com</a>
           </div>
